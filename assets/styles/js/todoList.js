@@ -5,37 +5,81 @@ const taskList = document.getElementById("taskList");
 const task = taskInput.value;
 const errorValidation =document.getElementById('error')
 
+function showTask() {
+    let taskItemsResponse = JSON.parse(localStorage.getItem('taskItems'));
+    if (taskItemsResponse === null || taskItemsResponse.length === 0) { 
+      taskList.classList.toggle("nonexisttask");
+      taskList.innerHTML = 'Задачи отсутствуют'; 
+      clearButtonTask.disabled = true;
+    } else {
+      taskList.innerHTML = '';
+      clearButtonTask.disabled = false;
+      taskList.classList.toggle("existtask");
 
-function showTask(){
- let taskItemsResponse = JSON.parse(localStorage.getItem('taskItems'));
- if (taskItemsResponse === null || taskItemsResponse.length === 0) { 
-   taskList.classList.toggle("nonexisttask");
-   taskList.innerHTML = 'Задачи отсутствуют'; 
-   clearButtonTask.disabled = true;
+      taskItemsResponse.forEach(task => {
+        const newElementli = document.createElement('li');
+        newElementli.classList.add('elementsTaskLi');
+        const newElemenSpan = document.createElement('span');
+        newElemenSpan.classList.add('spanList');
+
+        newElemenSpan.textContent = task.name;
+        if (task.completed) {
+          newElemenSpan.style.textDecoration = 'line-through';
+        }
+
+        const elementsButton = document.createElement('div');
+        elementsButton.classList = 'elementsButton'
+        const buttonDone = document.createElement('button');
+        buttonDone.classList.add('btn-action', 'done');
+        buttonDone.innerHTML = '&#10004;';
+
+    
+        const buttonDelete = document.createElement('button');
+        buttonDelete.classList.add('btn-action', 'delete');
+        buttonDelete.innerHTML = '&#10006;';
+
+    
+        newElementli.appendChild(newElemenSpan);
+        newElementli.appendChild(elementsButton);
+        elementsButton.appendChild(buttonDone);
+        elementsButton.appendChild(buttonDelete);
+        taskList.appendChild(newElementli);
+
+          
   
- } else {
-   taskList.innerHTML = '';
-   clearButtonTask.disabled = false;
-   taskList.classList.toggle("existtask");
-
-   taskItemsResponse.forEach(task => {
-     const newElementli = document.createElement('div');
-     //const newElementInput = document.createElement('input');
-     //newElementInput.setAttribute('type', 'checkbox');
-     //newElementInput.checked = task.completed;
-     const newElementLabel = document.createElement('label');
-     newElementLabel.textContent = task.name;
-     taskList.appendChild(newElementli);
-     //newElementli.appendChild(newElementInput);
-     newElementli.appendChild(newElementLabel);
-
-     //newElementInput.addEventListener('change', () => {
-      // task.completed = newElementInput.checked;
-       //localStorage.setItem('taskItems', JSON.stringify(taskItemsResponse));
-    // });
-   });
- }
+function deleteOneTask(taskId) {
+    let taskItems = JSON.parse(localStorage.getItem('taskItems'));
+    taskItems = taskItems.filter(item => item.idTask !== taskId);
+    localStorage.setItem('taskItems', JSON.stringify(taskItems));
+    showTask();
 }
+
+function completedTask(taskId) {
+    let taskItems = JSON.parse(localStorage.getItem('taskItems'));
+    taskItems.forEach(task => {
+      if (task.idTask === taskId) {
+        task.completed = true;
+      }
+    });
+    localStorage.setItem('taskItems', JSON.stringify(taskItems));
+    showTask();
+}
+
+buttonDone.addEventListener('click', () => {
+    const taskId = task.idTask;
+    completedTask(taskId);
+});
+
+buttonDelete.addEventListener('click', () => {
+    const taskId = task.idTask;
+    deleteOneTask(taskId);
+});
+
+
+      });
+    }
+  }
+
 
 
 taskInput.addEventListener('input', function() {
@@ -47,21 +91,17 @@ taskInput.addEventListener('input', function() {
 function createTask() {
     const task = taskInput.value;
     if (task.trim() !== '') {
-      let taskItems = localStorage.getItem('taskItems');
-      taskItems = taskItems ? JSON.parse(taskItems) : []; 
-      taskItems.push({ name: task, completed: false });
+      let taskItems = JSON.parse(localStorage.getItem('taskItems')) || [];
+      taskItems.push({ idTask: taskItems.length + 1, name: task, completed: false });
       localStorage.setItem('taskItems', JSON.stringify(taskItems));
       showTask();
       taskList.classList.remove("nonexisttask");
       taskInput.value = '';
       error.innerHTML = ''; // Очистить поле ошибки
     } else {
-      if (!taskInput.value.trim()) {
-        error.innerHTML = 'Кажется, вы что-то забыли заполнить';
-      } else {
-        error.innerHTML = '';
-      }
+      error.innerHTML = 'Кажется, вы что-то забыли заполнить';
     }
+
   }
 
 addButton.addEventListener("click", createTask);
