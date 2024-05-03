@@ -50,25 +50,22 @@
 }
 
 #resultBlog{
-    margin-left: 10% ;
-    margin-right: 10px;
+margin-left: 10px;
+    text-align: justify;
     
 }
 
 
 
-#createPostButton:hover,#clearPostButton:hover,#createPostButton:disabled {
+#createPostButton:hover,#clearPostButton:hover,#createPostButton:disabled,#clearPostButton:disabled {
     border-radius: 10px;
 }
 
-#createPostButton:disabled {
+#createPostButton:disabled,#clearPostButton:disabled {
     background-color: grey;
 }
 
-#resultBlog {
-    margin-left: 10px;
-   text-align: justify;
-}
+
 #error {
     color:  #624343;
 }

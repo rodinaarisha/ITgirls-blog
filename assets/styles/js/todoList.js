@@ -11,9 +11,11 @@ function showTask(){
  if (taskItemsResponse === null || taskItemsResponse.length === 0) { 
    taskList.classList.toggle("nonexisttask");
    taskList.innerHTML = 'Задачи отсутствуют'; 
+   clearButtonTask.disabled = true;
   
  } else {
    taskList.innerHTML = '';
+   clearButtonTask.disabled = false;
    taskList.classList.toggle("existtask");
 
    taskItemsResponse.forEach(task => {
@@ -66,17 +68,18 @@ addButton.addEventListener("click", createTask);
 
 
 function clearTasks() {
-    localStorage.removeItem('taskItems');
-    showTask();
-    taskList.classList.add("nonexisttask");
-  }
-  
-  clearButtonTask.addEventListener("click", function() {
-    clearTasks();
-    clearButtonTask.disabled = true; // Запретить повторное нажатие на кнопку "Очистить"
-  });
-  
+    let taskItems = JSON.parse(localStorage.getItem('taskItems'));
+    if (taskItems !== null) {
+        localStorage.removeItem('taskItems');
+        showTask();
+        taskList.classList.add("nonexisttask");
+        clearButtonTask.disabled = true; // Запретить повторное нажатие на кнопку "Очистить"
+    } else {
+        showTask();
+    }
+}
 
+clearButtonTask.addEventListener("click", clearTasks);
 
 
 document.addEventListener("DOMContentLoaded", showTask);

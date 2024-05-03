@@ -10,12 +10,13 @@ padding-top: 20px;
 
 
   }
-.todoList__Create,.resultTask{
+.todoList__Create{
     margin-left: 5%;
     margin-right: 5%;
 }
   .resultTask{
     font-size: 20px;
+    margin-left: -12px;
 
 
   }
@@ -25,25 +26,19 @@ padding-top: 20px;
   }
 
 
-#clearButton:disabled{
+#clearButtonTask:disabled{
   background-color: grey;
-  border-radius: 10px;
+
 }
 
   .completed {
     text-decoration: line-through;
   }
-  .existtask{
-    color: black;
-  }
 
   .nonexisttask{
 
     text-align: start;
-    color: grey;
-    font-size: 18px;
-    text-align: center;
-    margin: 0 20px 0 0;
-    padding-right: 30px;
+    font-size: 15px;
+
   }
 

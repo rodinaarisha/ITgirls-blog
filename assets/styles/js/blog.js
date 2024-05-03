@@ -7,7 +7,7 @@ console.log(titleInputValue.length)
 const createPostButton = document.getElementById('createPostButton')
 const error = document.getElementById('error')
 const bloglist = document.getElementById('resultBlog');
-const clearButton = document.getElementById('clearPostButton')
+const clearPostButton = document.getElementById('clearPostButton')
 let blogItemsData = []
 
 
@@ -41,13 +41,17 @@ function displayData(element){
     return h2 + body;
 }
 
-function showTask(){
+function showBlogItems(){
     let blogItemsResponse = JSON.parse(localStorage.getItem('blogItems'));
     if (blogItemsResponse === null || blogItemsResponse.length === 0) { 
+        clearPostButton.disabled = true;
        bloglist.innerHTML = 'Постов пока нет'; 
+      
+
 
     } else {
         bloglist.innerHTML = '';
+        clearPostButton.disabled = false;
   
      blogItemsResponse.forEach(task => {
 
@@ -62,10 +66,10 @@ function showTask(){
 
 
 
-document.addEventListener("DOMContentLoaded", showTask); 
+document.addEventListener("DOMContentLoaded", showBlogItems); 
 
 //создание поста
-function createTask() {
+function createBlogItem() {
     if (titleInput.value.trim() && textInput.value.trim()) {
         let bodyPost = {
             'title': titleInput.value,
@@ -74,6 +78,7 @@ function createTask() {
         }
         sendPost(bodyPost);
     } else {
+        createPostButton.disabled = true;
         error.innerHTML = 'Кажется, вы что-то забыли заполнить';
     }
 }
@@ -100,7 +105,7 @@ function sendPost(bodyPost) {
             blogItemsData = JSON.parse(localStorage.getItem('blogItems')) || [];
             blogItemsData.unshift(data); 
             localStorage.setItem('blogItems', JSON.stringify(blogItemsData));
-            showTask();
+            showBlogItems();
         })
         .catch((error) => {
             console.error('Ошибка:', error);
@@ -114,9 +119,12 @@ function sendPost(bodyPost) {
     }
 }
 
-clearButton.addEventListener("click", function() {
+clearPostButton.addEventListener("click", function() {
     localStorage.removeItem('blogItems');
-    showTask();
-  });
+    blogItemsResponse = []; // Обнуляем или переопределяем blogItemsResponse после удаления элементов
+    showBlogItems();
+    clearPostButton.disabled = true;
+ // Обновляем значение blogItemsResponse
+});
 
-createPostButton.addEventListener('click',createTask)
+createPostButton.addEventListener('click',createBlogItem)
