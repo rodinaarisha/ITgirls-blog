@@ -1,0 +1,44 @@
+*{
+    border: 1px solid plum;
+}
+
+.todoList {
+    display: flex;
+    flex-direction: column;
+padding-top: 20px;
+    height: auto;
+
+
+  }
+.todoList__Create{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+  .resultTask{
+    font-size: 20px;
+    margin-left: -12px;
+
+
+  }
+
+  #addButton,#clearButton{
+    width: 160px;
+  }
+
+
+#clearButtonTask:disabled{
+  background-color: grey;
+
+}
+
+  .completed {
+    text-decoration: line-through;
+  }
+
+  .nonexisttask{
+
+    text-align: start;
+    font-size: 15px;
+
+  }
+

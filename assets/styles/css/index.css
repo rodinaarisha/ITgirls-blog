@@ -24,7 +24,7 @@ h2{
           "leftSidebar blog rightSidebar"
           "leftSidebar blog rightSidebar";
 
-          font-family: 'Montserrat';
+          font-family: 'Montserrat' sans-serif;
           font-weight: 500;
           color: #624343;
       }
@@ -46,7 +46,8 @@ h2{
       
       .phrase { grid-area: phrase; }
       
-      .todoList { grid-area: todoList; }
+      .todoList { grid-area: todoList;
+      background-color: #EDCCC8; }
       
       .rightSidebar {  display: grid;
         grid-template-columns: 1fr 1fr 1fr;
