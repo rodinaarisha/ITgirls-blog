@@ -57,13 +57,12 @@
 
 
 
-#createPostButton:hover,#clearPostButton:hover {
+#createPostButton:hover,#clearPostButton:hover,#createPostButton:disabled {
     border-radius: 10px;
 }
 
 #createPostButton:disabled {
     background-color: grey;
-    border-radius: 10px;
 }
 
 #resultBlog {
