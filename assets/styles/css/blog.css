@@ -57,12 +57,13 @@ margin-left: 10px;
 
 
 
-#createPostButton:hover,#clearPostButton:hover,#createPostButton:disabled,#clearPostButton:disabled {
+#createPostButton:hover,#clearPostButton:hover,#createPostButton:hover,#clearPostButton:hover {
     border-radius: 10px;
 }
 
 #createPostButton:disabled,#clearPostButton:disabled {
     background-color: grey;
+
 }
 
 
