@@ -1,30 +1,34 @@
-*{
-    border: 1px solid green;
-}
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 @font-face {
     font-family: 'Montserrat';
     src: local('Montserrat Regular'), local('Montserrat-Regular'), url('http://hb.bizmrg.com/fonts/montserrat/400.woff2') format('woff2'), url('http://hb.bizmrg.com/fonts/montserrat/400.woff') format('woff');
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;}
 
+h2{
+  font-size: 16px;
+}
 
-
+    .header {
+      background-image:url('../../pictures/headerBackground.jpeg');
+    width: 100%;
+  height: 200px;}
     .container {  display: grid;
         grid-template-columns: 0.8fr 1.5fr 0.7fr;
         grid-template-rows: 1fr 0.7fr 1.3fr;
-        gap: 0px 0px;
+        gap: 2px 2px;
         grid-auto-flow: row;
         grid-template-areas:
-          "header header header"
           "leftSidebar blog rightSidebar"
           "leftSidebar blog rightSidebar";
+
+          font-family: 'Montserrat';
+          font-weight: 500;
+          color: #624343;
       }
       
-      .header { grid-area: header;
-        background-image:url('..//pictures/headerBackground.jpeg');}
       
       .leftSidebar {  display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -63,17 +67,32 @@
       .myGeo { grid-area: myGeo; }
       
       .blog {  display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr ;
         gap: 0px 0px;
         grid-auto-flow: row;
         grid-template-areas:
-          ". . ."
-          ". . ."
-          ". . .";
+          "."
+          "."
+          ".";
         grid-area: blog;
 
-        background-image: url("..//pictures/blogBackground.jpeg");
+
       }
       
+      .button{
+        height: 40px;
+        width: 180px;
+        border: 1px solid #B83E3E;
+        font-size: 15px;
+        background-color: transparent;
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-left: 5px;
+    
+      }
+
+      .button:hover{
+        border-radius: 10px;
+    }
   
