@@ -9,19 +9,50 @@
     <link rel="stylesheet" href="assets/styles/css/normalize.css" />
     <title>Document</title>
   </head>
-  <body class="container">
-    <header class="header">header</header>
-    <leftSidebar class="leftSidebar">
-      <div class="about_me">about_me</div>
-      <div class="phrase">phrase</div>
-      <div class="todoList">todoList</div>
-    </leftSidebar>
-    <main class="blog">Blog</main>
-    <rightSidebar class="rightSidebar">
-      <div class="weather">weather</div>
-      <div class="catPicture">catPicture</div>
-      <div class="myGeo">myGeo</div>
-    </rightSidebar>
-    <script src="assets/styles/js/index.js"></script>
+
+  <body>
+    <header class="header"></header>
+    <div class="container">
+      <leftSidebar class="leftSidebar">
+        <div class="about_me">about_me</div>
+        <div class="phrase">phrase</div>
+        <div class="todoList">todoList</div>
+      </leftSidebar>
+      <main class="blog_main">
+        <div class="blog">
+          <h1 class="titleH1">Мой блог</h1>
+          <div id="newPost">
+            <h2 class="titleH2">Новый пост</h2>
+            <input
+              class="input"
+              type="text"
+              name="title"
+              id="titleInput"
+              placeholder="Заголовок"
+            />
+            <input
+              class="input"
+              type="text"
+              name="descriptions"
+              id="textInput"
+              placeholder="Текст поста"
+            />
+            <button class="button" id="createPostButton">Создать пост</button>
+            <button class="button" id="clearPostButton">
+              Удалить все посты
+            </button>
+            <p id="error"></p>
+          </div>
+          <div id="resultBlog"></div>
+        </div>
+      </main>
+      <rightSidebar class="rightSidebar">
+        <div class="weather">weather</div>
+        <div class="catPicture">catPicture</div>
+        <div class="myGeo">myGeo</div>
+      </rightSidebar>
+      <script src="assets/styles/js/index.js"></script>
+      <script src="assets/styles/js/blog.js"></script>
+    </div>
   </body>
 </html>
