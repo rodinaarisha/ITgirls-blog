@@ -97,6 +97,7 @@ h2{
       }
 
       .button:hover{
-        border-radius: 10px;
+        background-color: #B83E3E;
+        color: white;
     }
   

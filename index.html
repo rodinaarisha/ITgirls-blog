@@ -8,9 +8,18 @@
     <link rel="stylesheet" href="assets/styles/css/blog.css" />
     <link rel="stylesheet" href="assets/styles/css/todoList.css" />
     <link rel="stylesheet" href="assets/styles/css/normalize.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <link rel="stylesheet" href="assets/styles/css/location.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" href="assets/styles/css/location.css" />
     <title>Document</title>
   </head>
 
@@ -74,14 +83,22 @@
         <div class="catPicture">catPicture</div>
         <div class="mymap">
           <div class="mapcontainer">
-              <button id="findLocation" onclick="createMap()" class="button">Мое местоположение</button>
-              <div class="location-container" style="display: none;">
-                  <div id="map"></div>
-                  <div id="address"></div>
-                  <button onclick="location.reload()" class="button">Проверить снова</button>
-              </div>
+            <button
+              id="findLocation"
+              onclick="createMap()"
+              class="button buttonGeo"
+            >
+              Мое местоположение
+            </button>
+            <div class="location-container" style="display: none">
+              <div id="map"></div>
+              <div id="address"></div>
+              <button onclick="location.reload()" class="button">
+                Проверить снова
+              </button>
+            </div>
           </div>
-      </div>
+        </div>
       </rightSidebar>
       <script src="assets/styles/js/index.js"></script>
       <script src="assets/styles/js/blog.js"></script>
