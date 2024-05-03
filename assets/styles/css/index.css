@@ -15,7 +15,7 @@ h2{
 }
 
     .header {
-      background-image:url('../../pictures/headerBackground.jpeg');
+     /* background-image:url('../../pictures/headerBackground.jpeg');*/
     width: 100%;
   height: 200px;}
     .container {  display: grid;
