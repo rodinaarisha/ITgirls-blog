@@ -58,7 +58,8 @@ function completedTask(taskId) {
     let taskItems = JSON.parse(localStorage.getItem('taskItems'));
     taskItems.forEach(task => {
       if (task.idTask === taskId) {
-        task.completed = true;
+        task.completed = task.completed ? false : true;
+
       }
     });
     localStorage.setItem('taskItems', JSON.stringify(taskItems));

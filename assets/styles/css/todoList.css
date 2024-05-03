@@ -1,6 +1,4 @@
-*{
-    border: 1px solid green;
-}
+
 
 .todoList {
     display: flex;
@@ -38,15 +36,13 @@ padding-top: 20px;
 }
 .btn-action{
     background-color: #EDCCC8;
+    border: none;
 }
- .delete{
-height:27px ;
-width: 36px;
-}
+
 
 
   #taskInput{
-    width: 90%;
+    width: 95%;
   }
 
   #addButton,#clearButton{
