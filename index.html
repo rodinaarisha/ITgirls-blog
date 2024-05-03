@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="assets/styles/css/index.css" />
     <link rel="stylesheet" href="assets/styles/css/blog.css" />
+    <link rel="stylesheet" href="assets/styles/css/about_me.css" />
     <link rel="stylesheet" href="assets/styles/css/todoList.css" />
     <link rel="stylesheet" href="assets/styles/css/normalize.css" />
     <link
@@ -27,7 +28,16 @@
     <header class="header"></header>
     <div class="container">
       <leftSidebar class="leftSidebar">
-        <div class="about_me">about_me</div>
+        <div class="about_me" id="about_me">
+          <img
+            id="about_me_Img"
+            src="assets/pictures/about_me.jpeg"
+            alt="Мое фото"
+          />
+          <div id="about_meDescription">
+            <p class="about_me" id="error__about_me"></p>
+          </div>
+        </div>
         <div class="phrase">phrase</div>
         <div class="todoList">
           <h1 class="titleH1" id="h1Text">Мой список дел</h1>
@@ -101,6 +111,7 @@
         </div>
       </rightSidebar>
       <script src="assets/styles/js/index.js"></script>
+      <script src="assets/styles/js/about_me.js"></script>
       <script src="assets/styles/js/blog.js"></script>
       <script src="assets/styles/js/todoList.js"></script>
       <script src="assets/styles/js/location.js"></script>
