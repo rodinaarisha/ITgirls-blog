@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="assets/styles/css/index.css" />
     <link rel="stylesheet" href="assets/styles/css/blog.css" />
+    <link rel="stylesheet" href="assets/styles/css/todoList.css" />
     <link rel="stylesheet" href="assets/styles/css/normalize.css" />
     <title>Document</title>
   </head>
@@ -16,7 +17,26 @@
       <leftSidebar class="leftSidebar">
         <div class="about_me">about_me</div>
         <div class="phrase">phrase</div>
-        <div class="todoList">todoList</div>
+        <div class="todoList">
+          <h1 class="titleH1" id="h1Text">Мой список дел</h1>
+          <div class="todoList__Create">
+            <h2 class="titleH2">Добавить задачу</h2>
+            <input
+              class="input"
+              type="text"
+              id="taskInput"
+              placeholder="Введите задачу"
+            />
+            <button class="button" id="addButton">Добавить</button>
+            <button class="button" id="clearButtonTask">
+              Очистить список задач
+            </button>
+            <p id="error"></p>
+          </div>
+          <div class="resultTask">
+            <ul id="taskList"></ul>
+          </div>
+        </div>
       </leftSidebar>
       <main class="blog_main">
         <div class="blog">
@@ -53,6 +73,7 @@
       </rightSidebar>
       <script src="assets/styles/js/index.js"></script>
       <script src="assets/styles/js/blog.js"></script>
+      <script src="assets/styles/js/todoList.js"></script>
     </div>
   </body>
 </html>

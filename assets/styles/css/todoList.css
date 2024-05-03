@@ -1,0 +1,49 @@
+*{
+    border: 1px solid plum;
+}
+
+.todoList {
+    display: flex;
+    flex-direction: column;
+padding-top: 20px;
+    height: auto;
+
+
+  }
+.todoList__Create,.resultTask{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+  .resultTask{
+    font-size: 20px;
+
+
+  }
+
+  #addButton,#clearButton{
+    width: 160px;
+  }
+
+
+#clearButton:disabled{
+  background-color: grey;
+  border-radius: 10px;
+}
+
+  .completed {
+    text-decoration: line-through;
+  }
+  .existtask{
+    color: black;
+  }
+
+  .nonexisttask{
+
+    text-align: start;
+    color: grey;
+    font-size: 18px;
+    text-align: center;
+    margin: 0 20px 0 0;
+    padding-right: 30px;
+  }
+
