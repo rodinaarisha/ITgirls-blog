@@ -1,0 +1,79 @@
+*{
+    border: 1px solid green;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat Regular'), local('Montserrat-Regular'), url('http://hb.bizmrg.com/fonts/montserrat/400.woff2') format('woff2'), url('http://hb.bizmrg.com/fonts/montserrat/400.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;}
+
+
+
+    .container {  display: grid;
+        grid-template-columns: 0.8fr 1.5fr 0.7fr;
+        grid-template-rows: 1fr 0.7fr 1.3fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "header header header"
+          "leftSidebar blog rightSidebar"
+          "leftSidebar blog rightSidebar";
+      }
+      
+      .header { grid-area: header;
+        background-image:url('..//pictures/headerBackground.jpeg');}
+      
+      .leftSidebar {  display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "about_me about_me about_me"
+          "phrase phrase phrase"
+          "todoList todoList todoList";
+        grid-area: leftSidebar;
+      }
+      
+      .about_me { grid-area: about_me; }
+      
+      .phrase { grid-area: phrase; }
+      
+      .todoList { grid-area: todoList; }
+      
+      .rightSidebar {  display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "weather weather weather"
+          "catPicture catPicture catPicture"
+          "myGeo myGeo myGeo";
+        grid-area: rightSidebar;
+      }
+      
+      .weather { grid-area: weather; }
+      
+      .catPicture { grid-area: catPicture; }
+      
+      .myGeo { grid-area: myGeo; }
+      
+      .blog {  display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          ". . ."
+          ". . ."
+          ". . .";
+        grid-area: blog;
+
+        background-image: url("..//pictures/blogBackground.jpeg");
+      }
+      
+  
