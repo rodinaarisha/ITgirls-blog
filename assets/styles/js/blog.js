@@ -1,9 +1,7 @@
 const titleInput = document.getElementById('titleInput');
 const titleInputValue = titleInput.value;
-console.log(titleInputValue.length)
 const textInput = document.getElementById('textInput');
 const textInputValue = textInput.value;
-console.log(titleInputValue.length)
 const createPostButton = document.getElementById('createPostButton')
 const error = document.getElementById('error')
 const bloglist = document.getElementById('resultBlog');
