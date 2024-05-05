@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="assets/styles/css/index.css" />
     <link rel="stylesheet" href="assets/styles/css/blog.css" />
+    <link rel="stylesheet" href="assets/styles/css/weather.css" />
     <link rel="stylesheet" href="assets/styles/css/about_me.css" />
     <link rel="stylesheet" href="assets/styles/css/todoList.css" />
     <link rel="stylesheet" href="assets/styles/css/normalize.css" />
@@ -89,7 +90,17 @@
         </div>
       </main>
       <rightSidebar class="rightSidebar">
-        <div class="weather">weather</div>
+        <div class="weather">
+          <h1 class="titleH1">Может быть хотите узнать погоду?</h1>
+          <input
+            type="text"
+            name=""
+            class="form input"
+            id="inputSearchCity"
+            placeholder="Введите название города"
+          />
+          <button class="button" id="searchWeatherButton">Найди</button>
+        </div>
         <div class="catPicture">catPicture</div>
         <div class="mymap">
           <div class="mapcontainer">
@@ -112,6 +123,7 @@
       </rightSidebar>
       <script src="assets/styles/js/index.js"></script>
       <script src="assets/styles/js/about_me.js"></script>
+      <script src="assets/styles/js/weather.js"></script>
       <script src="assets/styles/js/blog.js"></script>
       <script src="assets/styles/js/todoList.js"></script>
       <script src="assets/styles/js/location.js"></script>
