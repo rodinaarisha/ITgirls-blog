@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/styles/css/about_me.css" />
     <link rel="stylesheet" href="assets/styles/css/todoList.css" />
     <link rel="stylesheet" href="assets/styles/css/normalize.css" />
+    <link rel="stylesheet" href="./assets/styles/css/quotebox.css">
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -39,7 +40,17 @@
             <p class="about_me" id="error__about_me"></p>
           </div>
         </div>
-        <div class="phrase">phrase</div>
+        <div class="phrase">
+          <div class="quote_box";>
+            <div id="quoteOfTheDay" class="quote_container">
+               <p class="quote_header">Цитата дня</p> 
+            </div>
+            <div class="quote_phrase">
+                <p id="quote"></p>
+            </div>
+        </div>
+    
+        </div>
         <div class="todoList">
           <h1 class="titleH1" id="h1Text">Мой список дел</h1>
           <div class="todoList__Create">
@@ -137,6 +148,7 @@
       <script src="assets/styles/js/blog.js"></script>
       <script src="assets/styles/js/todoList.js"></script>
       <script src="assets/styles/js/location.js"></script>
+      <script src="./assets/styles/js/quotebox.js"></script>
     </div>
   </body>
 </html>
