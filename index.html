@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="assets/styles/css/index.css" />
     <link rel="stylesheet" href="assets/styles/css/blog.css" />
+    <link rel="stylesheet" href="assets/styles/css/weather.css" />
     <link rel="stylesheet" href="assets/styles/css/about_me.css" />
     <link rel="stylesheet" href="assets/styles/css/todoList.css" />
     <link rel="stylesheet" href="assets/styles/css/normalize.css" />
@@ -53,7 +54,7 @@
             <button class="button" id="clearButtonTask">
               Очистить список задач
             </button>
-            <p id="error"></p>
+            <p id="errorTask"></p>
           </div>
           <div class="resultTask">
             <ul id="taskList"></ul>
@@ -79,17 +80,34 @@
               id="textInput"
               placeholder="Текст поста"
             />
-            <button class="button" id="createPostButton">Создать пост</button>
-            <button class="button" id="clearPostButton">
-              Удалить все посты
-            </button>
-            <p id="error"></p>
+            <div class="buttonPost">
+              <button class="button" id="createPostButton">Создать пост</button>
+              <button class="button" id="clearPostButton">
+                Удалить все посты
+              </button>
+            </div>
+            <p id="errorPost"></p>
           </div>
           <div id="resultBlog"></div>
         </div>
       </main>
       <rightSidebar class="rightSidebar">
-        <div class="weather">weather</div>
+        <div class="weather">
+          <div id="inputDiv">
+            <input
+              type="text"
+              name=""
+              class="form input"
+              id="inputSearchCity"
+              placeholder="Введите город"
+            />
+            <button class="button" id="searchWeatherButton">Найди</button>
+          </div>
+          <p class="error" id="errorInput"></p>
+          <div class="sectionWeather" id="resultWeather">
+            <p id="errorWeather"></p>
+          </div>
+        </div>
         <div class="catPicture">catPicture</div>
         <div class="mymap">
           <div class="mapcontainer">
@@ -112,6 +130,7 @@
       </rightSidebar>
       <script src="assets/styles/js/index.js"></script>
       <script src="assets/styles/js/about_me.js"></script>
+      <script src="assets/styles/js/weather.js"></script>
       <script src="assets/styles/js/blog.js"></script>
       <script src="assets/styles/js/todoList.js"></script>
       <script src="assets/styles/js/location.js"></script>

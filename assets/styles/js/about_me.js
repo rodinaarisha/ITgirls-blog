@@ -6,7 +6,7 @@ let userMe = {};
 
 function dataAboutMe(element) {
     let name = "<p>"+ 'Имя: '+ element.name + "</p>";
-    let email = "<p>"+'Почта ' + element.email + "</p>";
+    let email = "<p>"+'Почта: ' + element.email + "</p>";
     let website = "<p>"+'Сайт: '  + element.website + "</p>";
     let company = "<p>"+'Место работы: ' + element.company.name + "</p>";
     return name + email + website + company;

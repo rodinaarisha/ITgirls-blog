@@ -3,7 +3,7 @@ const addButton = document.getElementById("addButton");
 const clearButtonTask = document.getElementById('clearButtonTask')
 const taskList = document.getElementById("taskList");
 const task = taskInput.value;
-const errorValidation =document.getElementById('error')
+const errorValidation =document.getElementById('errorTask')
 
 function showTask() {
     let taskItemsResponse = JSON.parse(localStorage.getItem('taskItems'));
@@ -84,7 +84,7 @@ buttonDelete.addEventListener('click', () => {
 
 
 taskInput.addEventListener('input', function() {
-    error.innerHTML = ''; // Очистить поле ошибки при вводе текста
+  errorValidation.innerHTML = ''; // Очистить поле ошибки при вводе текста
   });
   
 
@@ -98,9 +98,9 @@ function createTask() {
       showTask();
       taskList.classList.remove("nonexisttask");
       taskInput.value = '';
-      error.innerHTML = ''; // Очистить поле ошибки
+      errorValidation.innerHTML = ''; // Очистить поле ошибки
     } else {
-      error.innerHTML = 'Кажется, вы что-то забыли заполнить';
+      errorValidation.innerHTML = 'Кажется, вы что-то забыли заполнить';
     }
 
   }
