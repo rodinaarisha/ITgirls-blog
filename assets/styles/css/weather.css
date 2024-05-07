@@ -1,6 +1,6 @@
 
 .weather{
-
+margin-top: 20px;
     margin-left:10% ;
     margin-right: 10%;
 }
@@ -15,7 +15,7 @@
 #inputSearchCity {
     flex: 1; /* Используйте flex: 1, чтобы блоки распределились по ширине */
     margin-right: 10px;
-    ;
+    margin-top: 10px;
 }
 
 #searchWeatherButton {
