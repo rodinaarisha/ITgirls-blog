@@ -51,6 +51,11 @@
 
 }
 
+.inputPostDiv{
+    display: flex;
+    flex-direction: row;
+}
+
 #resultBlog{
 margin-left: 10px;
     text-align: justify;
