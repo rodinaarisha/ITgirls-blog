@@ -3,7 +3,7 @@ const titleInputValue = titleInput.value;
 const textInput = document.getElementById('textInput');
 const textInputValue = textInput.value;
 const createPostButton = document.getElementById('createPostButton')
-const error = document.getElementById('error')
+const errorPost = document.getElementById('errorPost')
 const bloglist = document.getElementById('resultBlog');
 const clearPostButton = document.getElementById('clearPostButton')
 let blogItemsData = []
@@ -12,10 +12,10 @@ let blogItemsData = []
 //обработчики событий для инпутов - чтобы проверить пустые или нет 
 titleInput.addEventListener('input', () => {
     if (!titleInput.value.trim() && !textInput.value.trim()) {
-        error.innerHTML = 'Кажется, вы что-то забыли заполнить';
+        errorPost.innerHTML = 'Кажется, вы что-то забыли заполнить';
         createPostButton.disabled = true;
     } else {
-        error.innerHTML = '';
+        errorPost.innerHTML = '';
         createPostButton.disabled = false; // изменено на false
     }
 });
@@ -24,10 +24,10 @@ titleInput.addEventListener('input', () => {
 
 textInput.addEventListener('input', () => {
     if (!titleInput.value.trim() && !textInput.value.trim()) {
-        error.innerHTML = 'Кажется, вы что-то забыли заполнить';
+        errorPost.innerHTML = 'Кажется, вы что-то забыли заполнить';
         createPostButton.disabled = true;
     } else {
-        error.innerHTML = '';
+        errorPost.innerHTML = '';
         createPostButton.disabled = false; 
     }
 });
@@ -77,7 +77,7 @@ function createBlogItem() {
         sendPost(bodyPost);
     } else {
         createPostButton.disabled = true;
-        error.innerHTML = 'Кажется, вы что-то забыли заполнить';
+        errorPost.innerHTML = 'Кажется, вы что-то забыли заполнить';
     }
 }
 
