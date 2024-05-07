@@ -16,10 +16,8 @@ const quoteElement = document.getElementById('quote');
     quoteElement.textContent = quote;
   }
 
-  // Initial call to display a quote when the page loads
   displayQuote();
 
-  // Show the container with a fade-in effect
   document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('quoteOfTheDay');
     container.style.opacity = '1';
