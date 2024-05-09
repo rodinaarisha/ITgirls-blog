@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="assets/styles/css/todoList.css" />
     <link rel="stylesheet" href="assets/styles/css/normalize.css" />
     <link rel="stylesheet" href="./assets/styles/css/quotebox.css">
+    <link rel="stylesheet" href="./assets/styles/css/header.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -27,7 +29,34 @@
   </head>
 
   <body>
-    <header class="header"></header>
+    <header class="header">
+      <div id="aboutproject">
+        <button class="btnabout" id="btnabout" onclick="document.getElementById('projecttext').innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus placeat veritatis sit dolorem omnis aliquid veniam? Quaerat atque provident earum vel delectus nisi est deserunt. Et impedit deleniti quam quisquam.'">О нашем проекте</button>
+        <p id="projecttext"></p>
+    </div>
+    <div id="music" class="music">
+        <div class="music___container">
+            <audio id="audio"></audio>
+            <p class="music___title">happy song</p>
+            <div class="music___image"></div>
+            <div class="music___player">
+                <div class="music___player--progress">
+                    <div class="progress"></div>
+                </div>
+                <button id="prev" class="action">
+                    <i class="ph ph-skip-back-circle"></i>
+                </button>
+                <button id="play" class="action">
+                    <i class="ph ph-play-circle"></i>
+                </button>
+                <button id="next" class="action">
+                    <i class="ph ph-skip-forward-circle"></i>
+                </button>
+                <button class="speed"><p>1.0x</p></button>
+            </div>
+        </div>
+    </div>
+    </header>
     <div class="container">
       <leftSidebar class="leftSidebar">
         <div class="about_me" id="about_me">
@@ -122,7 +151,6 @@
             <p id="errorWeather"></p>
           </div>
         </div>
-        <div class="catPicture">catPicture</div>
         <div class="mymap">
           <div class="mapcontainer">
             <button
@@ -141,6 +169,7 @@
             </div>
           </div>
         </div>
+        <div class="catPicture">catPicture</div>
       </rightSidebar>
       <script src="assets/styles/js/index.js"></script>
       <script src="assets/styles/js/about_me.js"></script>
@@ -149,6 +178,7 @@
       <script src="assets/styles/js/todoList.js"></script>
       <script src="assets/styles/js/location.js"></script>
       <script src="./assets/styles/js/quotebox.js"></script>
+      <script src="./assets/styles/js/header.js"></script>
     </div>
   </body>
 </html>

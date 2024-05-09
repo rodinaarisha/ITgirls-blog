@@ -7,11 +7,11 @@
 .mapcontainer {
     text-align: center;
     padding: 30px;
-    background-color: rgba(253, 235, 230);
+
     width: 400px;
 }
 .buttonGeo {
-    background-color: #FDEBE6;
+
     border-radius: 15px;
     color: #624343;
     cursor: pointer;

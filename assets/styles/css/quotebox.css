@@ -1,7 +1,7 @@
 .quote_box {
-    background-image: url(/assets/pictures/quote.jpg);
+    background-image: url(/assets/pictures/quote.png);
     background-size: cover;
-    width: 400px;
+    width: auto;
     height: 200px;
     top: 450px;
     display: flex;
