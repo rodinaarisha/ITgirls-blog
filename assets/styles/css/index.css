@@ -1,100 +1,117 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 @font-face {
-    font-family: 'Montserrat';
-    src: local('Montserrat Regular'), local('Montserrat-Regular'), url('http://hb.bizmrg.com/fonts/montserrat/400.woff2') format('woff2'), url('http://hb.bizmrg.com/fonts/montserrat/400.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;}
+  font-family: "Montserrat";
+  src: local("Montserrat Regular"), local("Montserrat-Regular"),
+    url("http://hb.bizmrg.com/fonts/montserrat/400.woff2") format("woff2"),
+    url("http://hb.bizmrg.com/fonts/montserrat/400.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
 
-    /*body{
+/*body{
       background-color: #EDCCC8; 
     }*/
-h2{
+h2 {
   font-size: 16px;
 }
 
-    .container {  display: grid;
-        grid-template-columns: 0.8fr 1.5fr 0.7fr;
-        grid-template-rows: 1fr 0.7fr 1.3fr;
-        gap: 2px 2px;
-        grid-auto-flow: row;
-        grid-template-areas:
-          "leftSidebar blog rightSidebar"
-          "leftSidebar blog rightSidebar";
+.container {
+  display: grid;
+  grid-template-columns: 0.8fr 1.5fr 0.7fr;
+  grid-template-rows: 1fr 0.7fr 1.3fr;
+  gap: 2px 2px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "leftSidebar blog rightSidebar"
+    "leftSidebar blog rightSidebar";
 
-          font-family: 'Montserrat' sans-serif;
-          font-weight: 500;
-          color: #624343;
-      }
-      
-      
-      .leftSidebar {  display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr .35fr 1fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-          "about_me about_me about_me"
-          "phrase phrase phrase"
-          "todoList todoList todoList";
-        grid-area: leftSidebar;
-      }
-      
-      .about_me { grid-area: about_me; }
-      
-      .phrase { grid-area: phrase; }
-      
-      .todoList { grid-area: todoList;
-      background-color: #EDCCC8; }
-      
-      .rightSidebar {  display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr .35fr 1fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-          "weather weather weather"
-          "myGeo myGeo myGeo"
-          "catPicture catPicture catPicture";
-        grid-area: rightSidebar;
-        background: linear-gradient(#EBC9C6, #EBDBE3);
-      }
-      
-      .weather { grid-area: weather; }
-      
-      .catPicture { grid-area: catPicture; }
-      
-      .myGeo { grid-area: myGeo; }
-      
-      .blog {  display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr ;
-        gap: 0px 0px;
-        grid-auto-flow: row;
-        grid-template-areas:
-          "."
-          "."
-          ".";
-        grid-area: blog;
+  font-family: "Montserrat" sans-serif;
+  font-weight: 500;
+  color: #624343;
+}
 
+.leftSidebar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.35fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "about_me about_me about_me"
+    "phrase phrase phrase"
+    "todoList todoList todoList";
+  grid-area: leftSidebar;
+}
 
-      }
-      
-      .button{
-        height: 40px;
-        width: 180px;
-        border: 1px solid #B83E3E;
-        font-size: 15px;
-        background-color: transparent;
-    border-radius: 15px;
-    margin-top: 15px;
-    margin-left: 5px;
-    
-      }
+.about_me {
+  grid-area: about_me;
+}
 
-      .button:hover{
-        background-color: #B83E3E;
-        color: white;
-    }
-  
+.phrase {
+  grid-area: phrase;
+}
+
+.todoList {
+  grid-area: todoList;
+  background-color: #edccc8;
+}
+
+.rightSidebar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.35fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "weather weather weather"
+    "myGeo myGeo myGeo"
+    "catPicture catPicture catPicture";
+  grid-area: rightSidebar;
+  background: linear-gradient(#ebc9c6, #ebdbe3);
+}
+
+.weather {
+  grid-area: weather;
+}
+
+.catPicture {
+  grid-area: catPicture;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.myGeo {
+  grid-area: myGeo;
+}
+
+.blog {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "."
+    "."
+    ".";
+  grid-area: blog;
+}
+
+.button {
+  height: 40px;
+  width: 180px;
+  border: 1px solid #b83e3e;
+  font-size: 15px;
+  background-color: transparent;
+  border-radius: 15px;
+  margin-top: 15px;
+  margin-left: 5px;
+}
+
+.button:hover {
+  background-color: #b83e3e;
+  color: white;
+}

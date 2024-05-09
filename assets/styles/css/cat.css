@@ -1,0 +1,9 @@
+.catImgWrapper {
+  display: flex;
+  justify-content: center;
+}
+.catImg {
+  width: 90%;
+  max-height: 300px;
+  overflow: hidden;
+}

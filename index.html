@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="assets/styles/css/about_me.css" />
     <link rel="stylesheet" href="assets/styles/css/todoList.css" />
     <link rel="stylesheet" href="assets/styles/css/normalize.css" />
-    <link rel="stylesheet" href="./assets/styles/css/quotebox.css">
-    <link rel="stylesheet" href="./assets/styles/css/header.css">
+    <link rel="stylesheet" href="./assets/styles/css/quotebox.css" />
+    <link rel="stylesheet" href="./assets/styles/css/cat.css" />
+    <link rel="stylesheet" href="./assets/styles/css/header.css" />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link
       rel="stylesheet"
@@ -31,31 +32,37 @@
   <body>
     <header class="header">
       <div id="aboutproject">
-        <button class="btnabout" id="btnabout" onclick="document.getElementById('projecttext').innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus placeat veritatis sit dolorem omnis aliquid veniam? Quaerat atque provident earum vel delectus nisi est deserunt. Et impedit deleniti quam quisquam.'">О нашем проекте</button>
+        <button
+          class="btnabout"
+          id="btnabout"
+          onclick="document.getElementById('projecttext').innerHTML = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus placeat veritatis sit dolorem omnis aliquid veniam? Quaerat atque provident earum vel delectus nisi est deserunt. Et impedit deleniti quam quisquam.'"
+        >
+          О нашем проекте
+        </button>
         <p id="projecttext"></p>
-    </div>
-    <div id="music" class="music">
+      </div>
+      <div id="music" class="music">
         <div class="music___container">
-            <audio id="audio"></audio>
-            <p class="music___title">happy song</p>
-            <div class="music___image"></div>
-            <div class="music___player">
-                <div class="music___player--progress">
-                    <div class="progress"></div>
-                </div>
-                <button id="prev" class="action">
-                    <i class="ph ph-skip-back-circle"></i>
-                </button>
-                <button id="play" class="action">
-                    <i class="ph ph-play-circle"></i>
-                </button>
-                <button id="next" class="action">
-                    <i class="ph ph-skip-forward-circle"></i>
-                </button>
-                <button class="speed"><p>1.0x</p></button>
+          <audio id="audio"></audio>
+          <p class="music___title">happy song</p>
+          <div class="music___image"></div>
+          <div class="music___player">
+            <div class="music___player--progress">
+              <div class="progress"></div>
             </div>
+            <button id="prev" class="action">
+              <i class="ph ph-skip-back-circle"></i>
+            </button>
+            <button id="play" class="action">
+              <i class="ph ph-play-circle"></i>
+            </button>
+            <button id="next" class="action">
+              <i class="ph ph-skip-forward-circle"></i>
+            </button>
+            <button class="speed"><p>1.0x</p></button>
+          </div>
         </div>
-    </div>
+      </div>
     </header>
     <div class="container">
       <leftSidebar class="leftSidebar">
@@ -70,15 +77,14 @@
           </div>
         </div>
         <div class="phrase">
-          <div class="quote_box";>
+          <div class="quote_box" ;>
             <div id="quoteOfTheDay" class="quote_container">
-               <p class="quote_header">Цитата дня</p> 
+              <p class="quote_header">Цитата дня</p>
             </div>
             <div class="quote_phrase">
-                <p id="quote"></p>
+              <p id="quote"></p>
             </div>
-        </div>
-    
+          </div>
         </div>
         <div class="todoList">
           <h1 class="titleH1" id="h1Text">Мой список дел</h1>
@@ -169,7 +175,11 @@
             </div>
           </div>
         </div>
-        <div class="catPicture">catPicture</div>
+        <div class="catPicture">
+          <h1 class="titleH1">Поcмотреть на рандомного котика</h1>
+          <button class="button buttonAddCat"></button>
+          <div class="catImgWrapper"></div>
+        </div>
       </rightSidebar>
       <script src="assets/styles/js/index.js"></script>
       <script src="assets/styles/js/about_me.js"></script>
@@ -178,6 +188,7 @@
       <script src="assets/styles/js/todoList.js"></script>
       <script src="assets/styles/js/location.js"></script>
       <script src="./assets/styles/js/quotebox.js"></script>
+      <script src="./assets/styles/js/cat.js"></script>
       <script src="./assets/styles/js/header.js"></script>
     </div>
   </body>
