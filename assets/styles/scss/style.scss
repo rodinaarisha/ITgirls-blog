@@ -68,6 +68,7 @@ h2 {
     padding: 5px;
     padding-top: 60px;
     height: auto;
+    width: auto;
     background: linear-gradient(to right, #EBC9C6 0%, #EBDBE3 100%);
   
   
@@ -86,6 +87,7 @@ h2 {
   // Блок Цитата
   .phrase {
     grid-area: phrase;
+    width: auto;
   
   .quote_box {
       background-image: url(/assets/pictures/quote.png);
@@ -122,6 +124,7 @@ h2 {
       line-height: 18.29px;
       text-align: center;
       justify-content: center;
+      width: auto;
   }
   
   .quote_phrase {
@@ -137,6 +140,7 @@ h2 {
   }
   //Блок туду лист
   .todoList {
+    width: auto;
     grid-area: todoList;
     background-color: $color1;
   
@@ -155,6 +159,7 @@ h2 {
       font-size: 20px;
       margin-left: -12px;
       background-color: $color1;
+      width: auto;
   
   
   
@@ -235,7 +240,6 @@ h2 {
   //Блок погоды
 .weather {
     grid-area: weather;
-  
     margin-top: 20px;
       margin-left:10% ;
       margin-right: 10%;
