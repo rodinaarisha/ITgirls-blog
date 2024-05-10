@@ -22,7 +22,7 @@
     width: 100%;
     border-left: 1px solid #B83E3E;
     border-right: 1px solid #B83E3E;
-    height: 300%;
+    height: 100vh; 
 
 }
 .blog {
@@ -34,6 +34,7 @@
     margin-right: 10%;
     height: auto;
     margin-top: 20px;
+    height: 100vh; 
 }
 
 /*#newPost{

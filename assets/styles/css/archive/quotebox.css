@@ -12,7 +12,6 @@
 }
 
 .quote_container {
-    border: 1px solid #B83E3E;
     width: 180px;
     height: 40px;
     gap: 0px;
@@ -24,9 +23,6 @@
     align-items: center;
     align-content: space-around;
     margin-left: 85px;
-
-
-
 
 }
 
