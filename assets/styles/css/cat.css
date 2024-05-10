@@ -4,6 +4,7 @@
 }
 .catImg {
   width: 90%;
-  max-height: 300px;
+  max-height: 200px;
   overflow: hidden;
+  border-radius: 5px;
 }
