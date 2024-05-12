@@ -51,13 +51,13 @@
             <button id="next" class="action">
               <i class="ph ph-skip-forward-circle"></i>
             </button>
-            <button class="speed"><p>1.0x</p></button>
+            <button class="speed">1.0x</button>
           </div>
         </div>
       </div>
     </header>
     <div class="container">
-      <leftSidebar class="leftSidebar">
+      <div class="leftSidebar">
         <div class="about_me" id="about_me">
           <img
             id="about_me_Img"
@@ -88,17 +88,19 @@
               id="taskInput"
               placeholder="Введите задачу"
             />
-            <button class="button" id="addButton">Добавить</button>
-            <button class="button" id="clearButtonTask">
-              Очистить список задач
-            </button>
+            <div class="buttonList">
+              <button class="button" id="addButton">Добавить</button>
+              <button class="button" id="clearButtonTask">
+                Очистить список задач
+              </button>
+            </div>
             <p id="errorTask"></p>
           </div>
           <div class="resultTask">
             <ul id="taskList"></ul>
           </div>
         </div>
-      </leftSidebar>
+      </div>
       <main class="blog_main">
         <div class="blog">
           <h1 class="titleH1">Мой блог</h1>
@@ -132,12 +134,12 @@
           <div id="resultBlog"></div>
         </div>
       </main>
-      <rightSidebar class="rightSidebar">
+      <div class="rightSidebar">
         <div class="weather">
           <div id="inputDiv">
             <input
               type="text"
-              name=""
+              name="inputSearchCity"
               class="form input"
               id="inputSearchCity"
               placeholder="Введите город"
@@ -172,7 +174,7 @@
           <button class="button buttonAddCat"></button>
           <div class="catImgWrapper"></div>
         </div>
-      </rightSidebar>
+      </div>
 
       <script src="assets/styles/js/index.js"></script>
       <script src="assets/styles/js/about_me.js"></script>
