@@ -69,7 +69,7 @@ let weatherDataJson;
 
 async function getGeo(name){
     try {
-        const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${name}&limit=5&appid=${API_KEY}`);
+        const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${name}&limit=5&appid=${API_KEY}`);
         if (!response.ok) {
             throw new Error('Request failed');
         }
