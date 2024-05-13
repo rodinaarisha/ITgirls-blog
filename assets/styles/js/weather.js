@@ -39,7 +39,7 @@ function displayWeatherData(element) {
     };
 
     const imgSrc = fileNames[element.main] ?
-        `src="/assets/pictures/weather/${fileNames[element.main]}.png"` : '';
+        `src="../../pictures/weather/${fileNames[element.main]}.png"` : '';
 
     const html = `
     <p class="weather__description" id="cityName">${element.name}</p>
