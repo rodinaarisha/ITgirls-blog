@@ -89,7 +89,7 @@ h2 {
     width: auto;
   
   .quote_box {
-      background-image: url(/assets/pictures/quote.png);
+      background-image: url(../../pictures/quote.png);
       background-size: cover;
       width: auto;
       height: 200px;
@@ -472,7 +472,7 @@ justify-content: center;
     height: 200px;
     display: grid;
     grid-template-columns:  70% 30%;
-    background-image: url(/assets/pictures/header.png);
+    background-image: url(../../pictures/header.png);
     background-repeat: no-repeat;
     background-size: cover;
     border-bottom: 1px solid $colorBorder;
