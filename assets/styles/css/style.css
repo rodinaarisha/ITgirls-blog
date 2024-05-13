@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @font-face {
   font-family: "Montserrat";
-  src: local("Montserrat Regular"), local("Montserrat-Regular"), url("http://hb.bizmrg.com/fonts/montserrat/400.woff2") format("woff2"), url("http://hb.bizmrg.com/fonts/montserrat/400.woff") format("woff");
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url("https://hb.bizmrg.com/fonts/montserrat/400.woff2") format("woff2"), url("https://hb.bizmrg.com/fonts/montserrat/400.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
