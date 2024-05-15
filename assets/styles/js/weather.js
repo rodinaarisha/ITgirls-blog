@@ -42,7 +42,6 @@ function displayWeatherData(element) {
     //    `src="/assets/pictures/weather/${fileNames[element.main]}.png"` : '';
        // `src="${fileNames[element.main]}.png"` : '';
        `src="./weather/${fileNames[element.main]}.png"` : '';
-        console.log(imgSrc)
 
     const html = `
     <p class="weather__description" id="cityName">${element.name}</p>
@@ -121,7 +120,6 @@ async function showWeather(cityName){
         let geoData = await getGeo(cityName); 
         if (geoData) { 
             let weatherData = await getWeather(cityName); 
-            console.log(displayWeatherData(weatherData))
             resultWeather.innerHTML = displayWeatherData(weatherData);
             inputSearchCity.value = '';
         } else {
@@ -138,7 +136,6 @@ async function showWeather(cityName){
         let geoData = await getGeo(defaultCity); 
         if (geoData) { 
             let weatherData = await getWeather(defaultCity); 
-            console.log(displayWeatherData(weatherData))
             resultWeather.innerHTML = displayWeatherData(weatherData);
         } else {
             errorWeather.innerHTML = 'Ошибка в получении гео-данных';

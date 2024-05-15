@@ -55,7 +55,6 @@ function showBlogItems(){
 
 
         bloglist.innerHTML += displayData(task);
-        console.log(task)
         localStorage.setItem('blogItems', JSON.stringify(blogItemsResponse));
         });
       };
@@ -99,7 +98,6 @@ function sendPost(bodyPost) {
             return response.json();
         })
         .then((data) => {
-            console.log(data);
             blogItemsData = JSON.parse(localStorage.getItem('blogItems')) || [];
             blogItemsData.unshift(data); 
             localStorage.setItem('blogItems', JSON.stringify(blogItemsData));
