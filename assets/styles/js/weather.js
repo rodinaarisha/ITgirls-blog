@@ -39,7 +39,9 @@ function displayWeatherData(element) {
     };
 
     const imgSrc = fileNames[element.main] ?
-        `src="/assets/pictures/weather/${fileNames[element.main]}.png"` : '';
+    //    `src="/assets/pictures/weather/${fileNames[element.main]}.png"` : '';
+       // `src="${fileNames[element.main]}.png"` : '';
+       `src="./weather/${fileNames[element.main]}.png"` : '';
         console.log(imgSrc)
 
     const html = `
